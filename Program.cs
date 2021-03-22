@@ -7,7 +7,7 @@ namespace Aula_de_PC1_Juros
         static void Main(string[] args)
         {
             double investimento , taxaJ , tempo, juros, capital;
-            string resposta;
+            int resposta;
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("\nHora de simular um investimento em seu futuro!");
@@ -31,17 +31,15 @@ namespace Aula_de_PC1_Juros
             Console.ReadLine();
             Console.Clear();
 
-            Console.WriteLine($"Com um investimento ùnico de R${investimento} sobre a taxa de 15%.m do valor investido.\nEm {tempo} messes seu capital total seria equivalente a R${capital} ");
-            Console.WriteLine("\nCaso deseje saber o valor da taxa de juros aplicada, escreva (SIM):");
-            resposta = Console.ReadLine();
-            if (resposta = SIM)
+            Console.WriteLine($"Com um investimento ùnico de R${investimento:N2} sobre a taxa de 15%.m do valor investido.\nEm {tempo} messes seu capital total seria equivalente a R${capital:N2} ");
+            Console.WriteLine("\nCaso deseje saber o valor da taxa de juros aplicada, tecle 5:");
+            resposta = Convert.ToInt32(Console.ReadLine());
+            if (resposta == 5)
             {
-                Console.WriteLine($"O valor da taxa de juros é igual a {taxaJ}.m");
-                Console.WriteLine("\nTecle enter para fechar o programa:");
-                Console.ReadLine();
-                Console.Clear();
+                Console.WriteLine($"O valor da taxa de juros é igual a R${taxaJ}.m");
 
             }
+           Console.WriteLine("Obrigada! Pressione qualquer botão para sair:");
            Console.ReadKey();
            Console.Clear();
         }
